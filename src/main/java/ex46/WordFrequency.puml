@@ -1,0 +1,34 @@
+@startuml
+
+'App takes in inputs'
+class App
+{
+    +void main();
+}
+
+'Reads the input file and access it's data'
+class ReadFile
+{
+    'Attributes'
+    +private HashMap<String, Integer> map
+    +private File inputFile
+    +private Scanner scan
+
+    'Functions'
+    +void readTheInfo()
+    +getMap()
+}
+
+'Prints the output as well as counts the frequency'
+class PrintFrequency
+{
+    'Attributes'
+    +private HashMap<String, Integer> map
+
+    'Functions'
+    +printScreen
+}
+
+App o--> ReadFile
+App o--> PrintFrequency
+@enduml
